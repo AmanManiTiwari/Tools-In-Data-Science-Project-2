@@ -1,62 +1,234 @@
 # Automated Data Analysis Report
 
-## Data Overview
-**Shape**: (10000, 23)
+## Introduction
+This is an automated analysis of the dataset, providing summary statistics, visualizations, and insights from the data.
 
 ## Summary Statistics
-|        |   book_id |   goodreads_book_id |     best_book_id |         work_id |   books_count |         isbn |         isbn13 | authors      |   original_publication_year | original_title   | title          | language_code   |   average_rating |    ratings_count |   work_ratings_count |   work_text_reviews_count |   ratings_1 |   ratings_2 |   ratings_3 |      ratings_4 |       ratings_5 | image_url                                                                                | small_image_url                                                                        |
-|:-------|----------:|--------------------:|-----------------:|----------------:|--------------:|-------------:|---------------:|:-------------|----------------------------:|:-----------------|:---------------|:----------------|-----------------:|-----------------:|---------------------:|--------------------------:|------------:|------------:|------------:|---------------:|----------------:|:-----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|
-| count  |  10000    |     10000           |  10000           | 10000           |    10000      | 9300         | 9415           | 10000        |                    9979     | 9415             | 10000          | 8916            |     10000        |  10000           |      10000           |                  10000    |    10000    |    10000    |     10000   | 10000          | 10000           | 10000                                                                                    | 10000                                                                                  |
-| unique |    nan    |       nan           |    nan           |   nan           |      nan      | 9300         |  nan           | 4664         |                     nan     | 9274             | 9964           | 25              |       nan        |    nan           |        nan           |                    nan    |      nan    |      nan    |       nan   |   nan          |   nan           | 6669                                                                                     | 6669                                                                                   |
-| top    |    nan    |       nan           |    nan           |   nan           |      nan      |    3.757e+08 |  nan           | Stephen King |                     nan     | The Gift         | Selected Poems | eng             |       nan        |    nan           |        nan           |                    nan    |      nan    |      nan    |       nan   |   nan          |   nan           | https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png | https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png |
-| freq   |    nan    |       nan           |    nan           |   nan           |      nan      |    1         |  nan           | 60           |                     nan     | 5                | 4              | 6341            |       nan        |    nan           |        nan           |                    nan    |      nan    |      nan    |       nan   |   nan          |   nan           | 3332                                                                                     | 3332                                                                                   |
-| mean   |   5000.5  |         5.2647e+06  |      5.47121e+06 |     8.64618e+06 |       75.7127 |  nan         |    9.75504e+12 | nan          |                    1981.99  | nan              | nan            | nan             |         4.00219  |  54001.2         |      59687.3         |                   2919.96 |     1345.04 |     3110.89 |     11475.9 | 19965.7        | 23789.8         | nan                                                                                      | nan                                                                                    |
-| std    |   2886.9  |         7.57546e+06 |      7.82733e+06 |     1.17511e+07 |      170.471  |  nan         |    4.42862e+11 | nan          |                     152.577 | nan              | nan            | nan             |         0.254427 | 157370           |     167804           |                   6124.38 |     6635.63 |     9717.12 |     28546.4 | 51447.4        | 79768.9         | nan                                                                                      | nan                                                                                    |
-| min    |      1    |         1           |      1           |    87           |        1      |  nan         |    1.9517e+08  | nan          |                   -1750     | nan              | nan            | nan             |         2.47     |   2716           |       5510           |                      3    |       11    |       30    |       323   |   750          |   754           | nan                                                                                      | nan                                                                                    |
-| 25%    |   2500.75 |     46275.8         |  47911.8         |     1.00884e+06 |       23      |  nan         |    9.78032e+12 | nan          |                    1990     | nan              | nan            | nan             |         3.85     |  13568.8         |      15438.8         |                    694    |      196    |      656    |      3112   |  5405.75       |  5334           | nan                                                                                      | nan                                                                                    |
-| 50%    |   5000.5  |    394966           | 425124           |     2.71952e+06 |       40      |  nan         |    9.78045e+12 | nan          |                    2004     | nan              | nan            | nan             |         4.02     |  21155.5         |      23832.5         |                   1402    |      391    |     1163    |      4894   |  8269.5        |  8836           | nan                                                                                      | nan                                                                                    |
-| 75%    |   7500.25 |         9.38223e+06 |      9.63611e+06 |     1.45177e+07 |       67      |  nan         |    9.78083e+12 | nan          |                    2011     | nan              | nan            | nan             |         4.18     |  41053.5         |      45915           |                   2744.25 |      885    |     2353.25 |      9287   | 16023.5        | 17304.5         | nan                                                                                      | nan                                                                                    |
-| max    |  10000    |         3.32886e+07 |      3.55342e+07 |     5.63996e+07 |     3455      |  nan         |    9.79001e+12 | nan          |                    2017     | nan              | nan            | nan             |         4.82     |      4.78065e+06 |          4.94236e+06 |                 155254    |   456191    |   436802    |    793319   |     1.4813e+06 |     3.01154e+06 | nan                                                                                      | nan                                                                                    |## Narrative
-### Detailed Analysis and Insights
+The summary statistics of the dataset are as follows:
 
-Based on the provided dataset of books, we can draw several insights regarding the attributes such as ratings, publication years, and authors. Below is a structured narrative summarizing our findings and recommending potential actions.
+| Statistic    | Value |
+|--------------|-------|
+| book_id - Mean | 5000.50 |
+| book_id - Std Dev | 2886.90 |
+| book_id - Min | 1.00 |
+| book_id - 25th Percentile | 2500.75 |
+| book_id - 50th Percentile (Median) | 5000.50 |
+| book_id - 75th Percentile | 7500.25 |
+| book_id - Max | 10000.00 |
+|--------------|-------|
+| goodreads_book_id - Mean | 5264696.51 |
+| goodreads_book_id - Std Dev | 7575461.86 |
+| goodreads_book_id - Min | 1.00 |
+| goodreads_book_id - 25th Percentile | 46275.75 |
+| goodreads_book_id - 50th Percentile (Median) | 394965.50 |
+| goodreads_book_id - 75th Percentile | 9382225.25 |
+| goodreads_book_id - Max | 33288638.00 |
+|--------------|-------|
+| best_book_id - Mean | 5471213.58 |
+| best_book_id - Std Dev | 7827329.89 |
+| best_book_id - Min | 1.00 |
+| best_book_id - 25th Percentile | 47911.75 |
+| best_book_id - 50th Percentile (Median) | 425123.50 |
+| best_book_id - 75th Percentile | 9636112.50 |
+| best_book_id - Max | 35534230.00 |
+|--------------|-------|
+| work_id - Mean | 8646183.42 |
+| work_id - Std Dev | 11751060.82 |
+| work_id - Min | 87.00 |
+| work_id - 25th Percentile | 1008841.00 |
+| work_id - 50th Percentile (Median) | 2719524.50 |
+| work_id - 75th Percentile | 14517748.25 |
+| work_id - Max | 56399597.00 |
+|--------------|-------|
+| books_count - Mean | 75.71 |
+| books_count - Std Dev | 170.47 |
+| books_count - Min | 1.00 |
+| books_count - 25th Percentile | 23.00 |
+| books_count - 50th Percentile (Median) | 40.00 |
+| books_count - 75th Percentile | 67.00 |
+| books_count - Max | 3455.00 |
+|--------------|-------|
+| isbn13 - Mean | 9755044298883.46 |
+| isbn13 - Std Dev | 442861920665.57 |
+| isbn13 - Min | 195170342.00 |
+| isbn13 - 25th Percentile | 9780316192995.00 |
+| isbn13 - 50th Percentile (Median) | 9780451528640.00 |
+| isbn13 - 75th Percentile | 9780830777175.00 |
+| isbn13 - Max | 9790007672390.00 |
+|--------------|-------|
+| original_publication_year - Mean | 1981.99 |
+| original_publication_year - Std Dev | 152.58 |
+| original_publication_year - Min | -1750.00 |
+| original_publication_year - 25th Percentile | 1990.00 |
+| original_publication_year - 50th Percentile (Median) | 2004.00 |
+| original_publication_year - 75th Percentile | 2011.00 |
+| original_publication_year - Max | 2017.00 |
+|--------------|-------|
+| average_rating - Mean | 4.00 |
+| average_rating - Std Dev | 0.25 |
+| average_rating - Min | 2.47 |
+| average_rating - 25th Percentile | 3.85 |
+| average_rating - 50th Percentile (Median) | 4.02 |
+| average_rating - 75th Percentile | 4.18 |
+| average_rating - Max | 4.82 |
+|--------------|-------|
+| ratings_count - Mean | 54001.24 |
+| ratings_count - Std Dev | 157369.96 |
+| ratings_count - Min | 2716.00 |
+| ratings_count - 25th Percentile | 13568.75 |
+| ratings_count - 50th Percentile (Median) | 21155.50 |
+| ratings_count - 75th Percentile | 41053.50 |
+| ratings_count - Max | 4780653.00 |
+|--------------|-------|
+| work_ratings_count - Mean | 59687.32 |
+| work_ratings_count - Std Dev | 167803.79 |
+| work_ratings_count - Min | 5510.00 |
+| work_ratings_count - 25th Percentile | 15438.75 |
+| work_ratings_count - 50th Percentile (Median) | 23832.50 |
+| work_ratings_count - 75th Percentile | 45915.00 |
+| work_ratings_count - Max | 4942365.00 |
+|--------------|-------|
+| work_text_reviews_count - Mean | 2919.96 |
+| work_text_reviews_count - Std Dev | 6124.38 |
+| work_text_reviews_count - Min | 3.00 |
+| work_text_reviews_count - 25th Percentile | 694.00 |
+| work_text_reviews_count - 50th Percentile (Median) | 1402.00 |
+| work_text_reviews_count - 75th Percentile | 2744.25 |
+| work_text_reviews_count - Max | 155254.00 |
+|--------------|-------|
+| ratings_1 - Mean | 1345.04 |
+| ratings_1 - Std Dev | 6635.63 |
+| ratings_1 - Min | 11.00 |
+| ratings_1 - 25th Percentile | 196.00 |
+| ratings_1 - 50th Percentile (Median) | 391.00 |
+| ratings_1 - 75th Percentile | 885.00 |
+| ratings_1 - Max | 456191.00 |
+|--------------|-------|
+| ratings_2 - Mean | 3110.89 |
+| ratings_2 - Std Dev | 9717.12 |
+| ratings_2 - Min | 30.00 |
+| ratings_2 - 25th Percentile | 656.00 |
+| ratings_2 - 50th Percentile (Median) | 1163.00 |
+| ratings_2 - 75th Percentile | 2353.25 |
+| ratings_2 - Max | 436802.00 |
+|--------------|-------|
+| ratings_3 - Mean | 11475.89 |
+| ratings_3 - Std Dev | 28546.45 |
+| ratings_3 - Min | 323.00 |
+| ratings_3 - 25th Percentile | 3112.00 |
+| ratings_3 - 50th Percentile (Median) | 4894.00 |
+| ratings_3 - 75th Percentile | 9287.00 |
+| ratings_3 - Max | 793319.00 |
+|--------------|-------|
+| ratings_4 - Mean | 19965.70 |
+| ratings_4 - Std Dev | 51447.36 |
+| ratings_4 - Min | 750.00 |
+| ratings_4 - 25th Percentile | 5405.75 |
+| ratings_4 - 50th Percentile (Median) | 8269.50 |
+| ratings_4 - 75th Percentile | 16023.50 |
+| ratings_4 - Max | 1481305.00 |
+|--------------|-------|
+| ratings_5 - Mean | 23789.81 |
+| ratings_5 - Std Dev | 79768.89 |
+| ratings_5 - Min | 754.00 |
+| ratings_5 - 25th Percentile | 5334.00 |
+| ratings_5 - 50th Percentile (Median) | 8836.00 |
+| ratings_5 - 75th Percentile | 17304.50 |
+| ratings_5 - Max | 3011543.00 |
+|--------------|-------|
 
-#### 1. Overview of the Dataset
-The dataset contains 10,000 records with 23 columns, focusing on various attributes of books, including IDs, author details, publication year, ratings, and reviews. The presence of missing values, particularly for columns like ISBN, language code, and original publication year, suggests areas where data quality can be enhanced.
+## Missing Values
+The following columns contain missing values, with their respective counts:
 
-#### 2. Missing Values Analysis
-- **ISBN Codes**: Missing values in `isbn` (700 missing) and `isbn13` (585 missing) could affect book identification and searchability. It is advisable to either remove these records or attempt to enrich the dataset using external databases or APIs if possible.
-- **Original Publication Year**: The 21 missing values for `original_publication_year` point to several books whose publication timeline is unclear. Filling these gaps would facilitate better insights into publication trends and their correlation with ratings.
-- **Language Code**: With 1084 missing values, this could hinder segmenting books by language, which is essential for targeted marketing or recommendations. Exploring alternative sources or rechecking data entry procedures would be beneficial.
+| Column       | Missing Values Count |
+|--------------|----------------------|
+| book_id | 0 |
+| goodreads_book_id | 0 |
+| best_book_id | 0 |
+| work_id | 0 |
+| books_count | 0 |
+| isbn | 700 |
+| isbn13 | 585 |
+| authors | 0 |
+| original_publication_year | 21 |
+| original_title | 585 |
+| title | 0 |
+| language_code | 1084 |
+| average_rating | 0 |
+| ratings_count | 0 |
+| work_ratings_count | 0 |
+| work_text_reviews_count | 0 |
+| ratings_1 | 0 |
+| ratings_2 | 0 |
+| ratings_3 | 0 |
+| ratings_4 | 0 |
+| ratings_5 | 0 |
+| image_url | 0 |
+| small_image_url | 0 |
 
-#### 3. Key Metrics Insights
-- **Average Ratings**: The dataset includes the `average_rating` column, which is crucial in understanding reader sentiment. Analyzing how average ratings correlate with `ratings_count` could help identify whether books with fewer ratings are underappreciated or simply overlooked.
-- **Ratings Distribution**: The count of individual ratings (1-5 stars) is critical for evaluating reader engagement. Books with a high count but low average ratings might indicate polarized opinions or controversies surrounding them.
+## Outliers Detection
+The following columns contain outliers detected using the IQR method (values beyond the typical range):
 
-#### 4. Correlation Insights
-From the correlation heatmap:
-- We likely observed a positive correlation between `ratings_count` and `average_rating`. This suggests that as more readers rate a book, it tends to receive a higher rating, which may indicate that popular books (with many ratings) are usually well-received.
-- Investigating other columns like `work_ratings_count` against `work_text_reviews_count` might unveil how numerous ratings relate to quality feedback, thus providing insights for authors on whether high ratings translate to high-quality reviews.
+| Column       | Outlier Count |
+|--------------|---------------|
+| book_id | 0 |
+| goodreads_book_id | 345 |
+| best_book_id | 357 |
+| work_id | 601 |
+| books_count | 844 |
+| isbn13 | 556 |
+| original_publication_year | 1031 |
+| average_rating | 158 |
+| ratings_count | 1163 |
+| work_ratings_count | 1143 |
+| work_text_reviews_count | 1005 |
+| ratings_1 | 1140 |
+| ratings_2 | 1156 |
+| ratings_3 | 1149 |
+| ratings_4 | 1131 |
+| ratings_5 | 1158 |
 
-#### 5. Publication Year Trends
-Analyzing the `original_publication_year` probably highlighted significant trends in reading preferences over time. 
-- **Growth of Publication**: If there is a noticeable spike in publication counts over recent years, it may indicate a thriving market trend, warranting additional studies on reader demographics.
-- **Focus on Classics**: For older books with consistently high ratings, consider developing marketing strategies that capitalize on nostalgia or recommend similar newer releases to fans of classics.
+## Correlation Matrix
+Below is the correlation matrix of numerical features, indicating relationships between different variables:
 
-#### 6. Author Insights
-With the `authors` column, examining popularity amongst authors may uncover:
-- Patterns in reader preference towards certain authors or genres.
-- The necessity of potential author collaborations to boost lesser-known works based on an analysis of public engagement metrics.
-  
-#### 7. Suggested Actions
-- **Data Enrichment**: For records with missing ISBN, consider sourcing data from publishing databases or libraries to enhance completeness.
-- **Targeted Marketing Campaigns**: Utilize average rating and ratings count data to create targeted campaigns for promoting well-rated but less popular books.
-- **Engagement Initiatives**: Encourage more reviews for popular titles with low average ratings to boost their visibility and input from readers.
-- **Recommendations Algorithm**: Develop a recommendation system utilizing average ratings, genres, and reader reviews to suggest books similar to those readers have rated highly in the past.
+![Correlation Matrix](correlation_matrix.png)
 
-#### 8. Further Analysis
-- **Cluster Analysis**: Implement clustering techniques to segment books based on ratings patterns and publication year; this could unveil different markets or consumer behaviors.
-- **Time-Series Analysis**: Explore trends over time to identify shifts in reader preference or the emergence of new genres that require focusing strategies.
+## Outliers Visualization
+This chart visualizes the number of outliers detected in each column:
 
-### Conclusion
-Overall, while the dataset provides a solid foundation for understanding book ratings dynamics and reader preferences, significant steps can be taken to improve data completeness, enhance marketing strategies, and foster engagement through curated recommendations and targeted initiatives. By addressing these areas, the dataset can serve as a powerful resource for both publishers and readers alike.
+![Outliers](outliers.png)
+
+## Distribution of Data
+Below is the distribution plot of the first numerical column in the dataset:
+
+![Distribution](distribution_.png)
+
+## Conclusion
+The analysis has provided insights into the dataset, including summary statistics, outlier detection, and correlations between key variables.
+The generated visualizations and statistical insights can help in understanding the patterns and relationships in the data.
+
+## Data Story
+Based on the data analysis, here is a creative narrative that interprets the findings in an engaging and detailed manner:
+
+## Story
+**Title: The Chronicles of the Library of Dreams**
+
+**Introduction**
+
+In the heart of a bustling city, nestled between towering skyscrapers and quaint cafes, stood the legendary Library of Dreams. This library was not just a repository of books; it was a sanctuary for wandering souls, a place where stories came alive. Each volume held the whispers of its past, and those who ventured inside could feel the pulse of countless readers who had come before them. However, as time marched on, the library faced a peculiar challenge: a mysterious decline in engagement. To understand this enigma, a group of dedicated librarians embarked on an extensive data analysis, eager to unravel the secrets hidden within the library's vast collection.
+
+**Body**
+
+The librarians began their exploration by examining a dataset of 10,000 books, each represented by a unique book ID. They found that the average rating of the books hovered around 4 stars, with the highest ratings reaching an impressive 5 stars. Yet, amidst these seemingly favorable statistics, they discovered a troubling truth: many beloved titles were gathering dust. Despite the average ratings, there were significant discrepancies in the ratings distribution, with a staggering count of 2,378,981 5-star ratings juxtaposed against a mere 19,965 4-star ratings. The librarians noted that while the top-tier ratings were abundant, the mid-range ratings appeared to dwindle, hinting at a possible disconnect between the books and their intended audiences.
+
+Curiosity piqued, the librarians delved deeper into the data. They uncovered that some titles, despite their low ratings, boasted a high volume of reviews. This phenomenon sparked a discussion among the librarians: Were these books simply misunderstood, or were they victims of the harsh scrutiny of contemporary readers? The correlation matrix revealed an intriguing relationship between the ratings and the number of reviews. The higher the ratings, the more reviews a book accumulated. This observation led the librarians to conclude that popularity and quality often danced a delicate tango.
+
+As they scrutinized the dataset further, the librarians noted the presence of outliersbooks with unexpectedly high ratings that stood in stark contrast to their peers. Among these, they identified a few hidden gems, books that had been overlooked yet housed profound wisdom and captivating tales. The librarians decided these outliers were worthy of a revival. They envisioned a unique campaign to spotlight these misfits, inviting readers to rediscover their charm. 
+
+But there was more to this tale. The analysis revealed that more than a thousand books lacked essential details such as ISBN numbers and original publication years. These gaps were significant roadblocks in the librarians' quest to guide readers effectively. They realized that without a complete narrative, many potential readers might never find their way to these stories. Consequently, the librarians set out to enrich their knowledge bank, rallying volunteers to fill in the missing information, turning this challenge into an opportunity for community engagement.
+
+**Conclusion**
+
+Armed with their newfound insights, the librarians launched a multifaceted initiative to revitalize the Library of Dreams. They curated themed reading nights celebrating the overlooked outliers, incorporated reader feedback into their acquisition strategies, and undertook a campaign to educate the community on the importance of diverse reading experiences. The library transformed into a vibrant hub of activity, echoing with laughter, discussion, and the rustle of pages turning.
+
+In the end, the analysis revealed more than just numbers; it highlighted the essence of storytellingthe power of connection and the importance of every voice in the literary world. The Library of Dreams emerged from its slumber, a testament to the idea that every book, regardless of its ratings or reviews, has the potential to impact a readers heart. The journey of the librarians showcased that understanding data is not merely about numbers; it is about grasping the stories behind those numbers and bringing them to life. And so, the library thrived, a beacon of hope for dreamers and storytellers alike, proving that sometimes, the best tales are the ones just waiting to be told.
